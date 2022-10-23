@@ -1,0 +1,69 @@
+SPA
+quasar dev
+  Show app in Chrome Browser on port 9000
+quasar build
+quasar serve dist/spa
+  Show app in Chrome Browser with localhost:4000
+
+BEX
+quasar mode add bex
+  Manifest V3 (Chrome only for now)
+quasar dev -m bex
+Execute Bex from source
+https://quasar.dev/quasar-cli-webpack/developing-browser-extensions/build-commands
+In Chrome, navigate to chrome://extensions
+Toggle “Developer Mode”.
+Click “Load unpacked”. This will present you with the folder selection dialog.
+Navigate to and select your dist/bex folder.
+You should now see your BEX mounted in Chrome.
+
+quasar build -m bex
+Execute Bex from build
+https://quasar.dev/quasar-cli-webpack/developing-browser-extensions/build-commands#building-for-production
+If you want to test out the your-project-name.zip file, you can do this by dragging
+the file into the same place you load the Extension in development mode;
+for Chrome chrome://extensions and Firefox about:debugging.
+
+ELECTRON
+quasar mode add electron
+quasar dev -m electron
+quasar build -m electron -d --devtools (-d for debugger --devtools Vue Devtools)
+- Electron with default "electron-packager" bundler (default: yours)
+  [darwin|win32|linux|mas|all]
+- Electron with "electron-builder" bundler (default: yours)
+  [darwin|mac|win32|win|linux|all]
+Electron packager
+Open a DOS command in Administrator mode
+quasar build -m electron -b packager -T all
+  WARNING: signing is required for mas builds. Provide the osx-sign option, or manually sign the app later.
+  darwin|win32|linux|mas all in x64 Arch
+
+/***************
+quasar build -m electron -b packager -T win32 -A all
+  ia32 - x64 - arm64
+quasar build -m electron -b packager -T linux -A all
+  -A ia32 (not ok)
+    deprecated
+  -A x64 (ok)
+  -A arm64 (ok)
+  -A armv7l (ok)
+  -A mips64el (not ok)
+    WARNING: Official linux/mips64el support only exists in Electron ^1.8.2-beta.5
+quasar build -m electron -b packager -T darwin -A x64
+
+Electron builder
+quasar build -m electron --T all
+************/
+
+CAPACITOR
+quasar mode add capacitor
+quasar build -m capacitor -T android -H 192.168.1.192
+Démarer Android Studio
+  Open Project - src-capacitor/android
+  ?? Build - Generate Signed Bundle(APK)
+  Build bundle(s) / APK(s) - Build APK(s)
+  PWD: pete1234
+  Transfer du PC au Mobile dans le dossier download et cliquer pour installer
+D:\dev\assistante2\app\src-capacitor\android\app\debug\app-debug.apk
+D:\dev\assistante2\app\src-capacitor\android\app\release\app-release.apk
+

@@ -1,0 +1,13 @@
+Deploy to Netlify
+https://www.youtube.com/watch?v=vf7Nz0AbBY4
+https://www.youtube.com/watch?v=mT5siI19gtc&t=1221s
+
+
+GIT
+git init (only done once)
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/PMorelGithub/quasar-netlify-spa.git (only done once)
+git branch -M main (only done once)
+git push -u origin main
+

@@ -1,0 +1,81 @@
+Muli devices Quasar
+ - web (OK)
+ - bex (OK) Chrome only in manifest V3
+ - electron (OK)
+   win32 (OK)
+   linux (?)
+   darwin (not tested)
+   mas (not tested)
+
+ - capacitor
+   - android
+     (OK debug - not signed apk)
+
+   - ios
+ - cordova
+   - android
+   - ios
+
+I18N
+  Address bar parameter
+  Cookie detect
+  Browser detect
+  Application default = "en-US"
+RTL
+Tooltip
+  Detect mobile
+  Cookie detect
+  Application default = true
+Register
+ - identity key
+ - wallet (metamask)
+Login
+ - identity key
+ - wallet (metamask)
+
+=====================
+language = null
+Languages
+if Command Line language
+  if ?lang=[en or fr]
+    language = lang
+if language === null
+  if useCookies
+    language = UILanguage
+if language === null
+    lang = Browser PreferredLanguages
+    if lang=[fr or en]
+      language = lang
+    else
+      language = en
+
+
+==================
+https://vueuse.org/
+============================
+Pinia sample
+https://github.com/deepgram-devs/todo-pinia/tree/pinia-typescript
+
+=======================
+SpeechRecognition
+https://www.studytonight.com/post/javascript-speech-recognition-example-speech-to-text
+https://www.google.com/intl/en/chrome/demos/speech.html
+https://googleapis.dev/nodejs/speech/latest/
+
+
+SpeechSynthesis
+https://www.studytonight.com/post/javascript-text-to-speech-using-speechsynthesis-interface
+
+=====================================
+NLP
+https://winkjs.org/
+
+=========================
+OpenAI
+API key: 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
+
+
+curl https://api.openai.com/v1/moderations -X POST -H "Content-Type: application/json" -H "Authorization: Bearer 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" -d '{"input": "Sample text goes here"}'
+
+=====================
+
